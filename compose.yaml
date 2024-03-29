@@ -1,0 +1,13 @@
+name: garage-project
+
+services:
+  garage:
+    build:
+      dockerfile: ./Garage.Api/Dockerfile
+    ports:
+      - "7220:80"
+  person:
+    build:
+      dockerfile: ./Person.Api/Dockerfile
+    ports:
+      - "7221:80"

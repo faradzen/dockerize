@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garage.Api", "Garage.Api\Garage.Api.csproj", "{FB55D579-4790-4BEE-B130-A90A343CC2AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person.Api", "Person.Api\Person.Api.csproj", "{54C6EFB7-64C2-45DA-89AB-28FC6A87A28B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{EB5501CC-5D1B-45C5-B047-C1C105EB8E9A}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB55D579-4790-4BEE-B130-A90A343CC2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB55D579-4790-4BEE-B130-A90A343CC2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB55D579-4790-4BEE-B130-A90A343CC2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB55D579-4790-4BEE-B130-A90A343CC2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C6EFB7-64C2-45DA-89AB-28FC6A87A28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C6EFB7-64C2-45DA-89AB-28FC6A87A28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C6EFB7-64C2-45DA-89AB-28FC6A87A28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C6EFB7-64C2-45DA-89AB-28FC6A87A28B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
