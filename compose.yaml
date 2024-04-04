@@ -1,13 +1,15 @@
-name: garage-project
+version: '3.3'
 
 services:
   garage:
+    container_name: 'garage-api'
     build:
-      dockerfile: ./Garage.Api/Dockerfile
+      context: './Garage.Api'
     ports:
       - "7220:80"
   person:
+    container_name: 'person-api'
     build:
-      dockerfile: ./Person.Api/Dockerfile
+      context: './Person.Api'
     ports:
       - "7221:80"

@@ -1,20 +1,16 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/sdk:6.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY ["Person.Api/Person.Api.csproj", "Person.Api/"]
-RUN dotnet restore "Person.Api/Person.Api.csproj"
-COPY . .
-WORKDIR "/src/Person.Api"
-RUN dotnet build "Person.Api.csproj" -c Release -o /app/build
+COPY Person.Api.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
+COPY . ./
 RUN dotnet publish "Person.Api.csproj" -c Release -o /app/publish
 
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+EXPOSE 80
+COPY --from=base /app/publish .
+
 ENTRYPOINT ["dotnet", "Person.Api.dll"]
+
